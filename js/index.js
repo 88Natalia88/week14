@@ -65,3 +65,18 @@ return directors[i].top_rated_film;
 });
 document.querySelector('.best-films').innerHTML = topFilmsList;
 //console.log(topFilmsList);
+
+
+//задание под звездочкой
+const arr1 = [1, 2];
+const arr2 = [2, 3];
+const arr3 = ['a', 'b'];
+const arr4 = ['b', 'c'];
+const arr5 = ['b', 'e', 'c'];
+const arr6 = ['b', 'b', 'e'];
+const arr7 = ['b', 'c', 'e'];
+const arr8 = ['b', 'e', 'c'];
+
+const intersection = (...arrays) => {
+  
+ }
