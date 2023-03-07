@@ -1,3 +1,6 @@
-h1, h2{
+h1, h2, .best-films{
     text-align: center;
+}
+.director, .best-films{
+    font-size: 20px;
 }

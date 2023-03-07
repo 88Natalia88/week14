@@ -44,5 +44,24 @@ let directors = [
 ];
 //console.log(directors[1]);
 
-document.querySelectorAll('.director').forEach((n, i) => n.textContent = directors[i].name);
-document.querySelectorAll('.career').forEach((n, i) => n.textContent = directors[i].career);
+//режиссеры
+document.querySelectorAll('.director').forEach(function(person, i){
+person.textContent = directors[i].name;
+});
+
+//карьера
+document.querySelectorAll('.career').forEach(function(person, i){
+  person.textContent = directors[i].career;
+  });
+
+  //фильмография
+  document.querySelectorAll('.films').forEach(function(person, i){
+    person.href = directors[i].films;
+    });
+
+  //список лучших фильмов
+let topFilmsList = directors.map(function(person, i){
+return directors[i].top_rated_film;
+});
+document.querySelector('.best-films').innerHTML = topFilmsList;
+//console.log(topFilmsList);
