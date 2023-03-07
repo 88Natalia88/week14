@@ -77,6 +77,21 @@ const arr6 = ['b', 'b', 'e'];
 const arr7 = ['b', 'c', 'e'];
 const arr8 = ['b', 'e', 'c'];
 
-const intersection = (...arrays) => {
-  
- }
+const arrays = [arr3, arr4, arr5];
+
+const intersection = arrays.reduce((number, array) => {
+  return number.filter(element => array.includes(element));
+});
+
+console.log(intersection);
+//let number = arr1.filter(elem => arr2.indexOf(elem) !== -1);
+let first = arr1.filter(elem => arr2.includes(elem));
+
+console.log(first);
+
+const arrays2 = [arr6, arr7, arr8];
+const second = arrays.reduce((number, array) => {
+  return number.filter(element => array.indexOf(element) !== -1);
+});
+
+console.log(second);
