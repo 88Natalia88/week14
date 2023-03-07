@@ -90,7 +90,7 @@ let first = arr1.filter(elem => arr2.includes(elem));
 console.log(first);
 
 const arrays2 = [arr6, arr7, arr8];
-const second = arrays.reduce((number, array) => {
+const second = arrays2.reduce((number, array) => {
   return number.filter(element => array.indexOf(element) !== -1);
 });
 
