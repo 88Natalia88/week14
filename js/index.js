@@ -45,27 +45,18 @@ let directors = [
 //console.log(directors[1]);
 
 //режиссеры
-//document.querySelectorAll('.director').forEach(function(person, i){
-//person.textContent = directors[i].name;
-//});
 let directorsNodes = document.querySelectorAll('.director');
 directors.forEach(function(person, i){
   directorsNodes[i].innerHTML = directors[i].name;
 });
 
 //карьера
-/*document.querySelectorAll('.career').forEach(function(person, i){
-  person.textContent = directors[i].career;
-  });*/
   let careerNodes = document.querySelectorAll('.career');
 directors.forEach(function(person, i){
   careerNodes[i].innerHTML = directors[i].career;
 });
 
   //фильмография
-  /*document.querySelectorAll('.films').forEach(function(person, i){
-    person.href = directors[i].films;
-    });*/
     let films = document.querySelectorAll('.films');
     directors.forEach(function(person, i){
       films[i].href = directors[i].films;
@@ -89,21 +80,22 @@ const arr6 = ['b', 'b', 'e'];
 const arr7 = ['b', 'c', 'e'];
 const arr8 = ['b', 'e', 'c'];
 
-const arrays = [arr3, arr4, arr5];
-
-const intersection = arrays.reduce((number, array) => {
-  return number.filter(element => array.includes(element));
-});
-
-console.log(intersection);
-//let number = arr1.filter(elem => arr2.indexOf(elem) !== -1);
-let first = arr1.filter(elem => arr2.includes(elem));
-
+//arr1, arr2
+const first = arr1.filter(elem => arr2.includes(elem));
 console.log(first);
 
-const arrays2 = [arr6, arr7, arr8];
-const second = arrays2.reduce((number, array) => {
-  return number.filter(element => array.indexOf(element) !== -1);
+//arr3, arr4, arr5
+const second = arr3.filter(function(elem, i){
+ if(arr4.includes(elem) && arr5.includes(elem)){
+  return true;
+ }
 });
-
 console.log(second);
+
+//arr6, arr7, arr8
+const third = arr6.filter(function(elem, i){
+  if(arr7.includes(elem) && arr8.includes(elem)){
+  return true;
+  }
+});
+console.log(third);
